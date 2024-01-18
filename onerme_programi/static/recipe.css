@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:wght@400;700&family=Montserrat:wght@400;600&family=Open+Sans:wght@300&family=Poppins:wght@400;500;600;800&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Herr+Von+Muellerhoff&family=Lato:wght@400;700&family=Montserrat:wght@400;600&family=Open+Sans:wght@300&family=Poppins:wght@400;500;600;800&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+    justify-content: center; /* İçeriği sayfada ortala */
+    align-items: center; /* Dikey olarak ortala */
+    min-height: 100vh; /* Tüm sayfa yüksekliğini kapla */
+    background: linear-gradient(to right,  #F2E3D5, white);
+}
+
+
+nav {
+     /* Navigasyon arka plan rengi */
+    color: white;
+    padding: 10px 20px; /* Navigasyon iç boşluğu */
+    height: 65px;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Navigasyon içeriğini sağa ve sola yasla */
+    align-items: center; /* Dikey olarak ortala */
+    height: 100%;
+}
+.nav-container h2{
+    color: #4CAF50;
+}
+
+.birl {
+    display: flex;
+    align-items: center; /* Logo ve başlığı dikey olarak ortala */
+}
+
+.logo {
+   max-height: 200px;
+   max-width: 400px;
+   height: auto;
+   width: auto;
+    margin-right: 10px; /* Logonun sağında boşluk */
+    margin-top: 10px;
+}
+
+.buton {
+    padding: 10px 25px;
+    margin-right: 20px;
+    background-color: #733E32;
+    border: none;
+    border-radius: 25px; /* Buton köşe yuvarlaklığı */
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.buton:hover {
+    background-color: #D99F6C; /* Butona mouse üzerine geldiğinde renk değişimi */
+}
+
+.recipe-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    max-width: 800px; /* Max width for the recipe container */
+    margin: auto; /* Center the container */
+    margin-top: 50px; /* Add some space on the top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.recipe-container ol {
+    list-style: none; /* Remove default list styling */
+    counter-reset: step-counter; /* Create a counter for list items */
+    width: 100%;
+}
+
+.recipe-container ol li {
+    counter-increment: step-counter; /* Increment the counter */
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    background: #F2E3D5;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-container ol li::before {
+    content: counter(step-counter) '. ';
+    font-weight: bold;
+    color: #733E32;
+}
+
+.back-link {
+    color: #D99F6C;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Additional media query for responsiveness */
+@media screen and (max-width: 600px) {
+    .recipe-container {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 20px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .buton {
+        margin-top: 10px;
+    }
+}

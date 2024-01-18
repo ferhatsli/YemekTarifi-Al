@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+  </head>
+ 
+  <body>
+    <!-- Navigasyon kısmı -->
+    <nav>
+        <div class="wrapper">
+            <div class="nav-container">
+                <div class="birl">
+                    <img class="logo" src="{{ url_for('static', filename='image/logo.png') }}" alt="" />
+                </div>
+                <a href="{{ url_for('login') }}" class="buton">Sign in</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ana içerik kısmı -->
+    <div class="main-container">
+        <section class="main1">
+            <div class="main">
+                <div class="content">
+                    <div class="heading">
+                        <h1>Effortless meal plans</h1>
+                        <h2>with AI generated recipes!</h2>
+                        <p>
+                            Discover new recipes by following users with similar tastes and
+                            nutritional goals 🎉.
+                        </p>
+                        <a href="{{ url_for('index') }}"><button class="btn_1">Go To Recipes</button></a>
+                        <button class="btn_2">Recipe Generator</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='image/image-chef.png') }}" alt="Açıklama" class="side-image">
+        </div>
+    </div>
+    <section class="content-section">
+        <div class="content-header">
+            <h2>Focus on your core meals</h2>
+            <p>Keep all your favorite recipes in one place so you can easily shop for their ingredients, follow the cooking directions, and track how many times you made your favorites.</p>
+        </div>
+        <div class="content-features">
+            <div class="feature">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Record your meals</h3>
+                <p>Tracking your meals allows you and your followers to easily see the recipes you make most often.</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-plus"></i>
+                <h3>Easily add recipes</h3>
+                <p>Adding recipes is quick and easy. Add your favorites and give them a custom url so others can find them.</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-calendar-plus"></i>
+                <h3>Build menus</h3>
+                <p>Take control of your dinner routine. Create menus to easily shop for a weeks worth of ingredients in one go.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="content-header">
+            <h2>Discover new recipes</h2>
+            <p>Keep all your favorite recipes in one place so you can easily shop for their ingredients, follow the cooking directions, and track how many times you made your favorites.</p>
+        </div>
+        <div class="content-features">
+            <div class="feature">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Record your meals</h3>
+                <p>Tracking your meals allows you and your followers to easily see the recipes you make most often.</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-plus"></i>
+                <h3>Easily add recipes</h3>
+                <p>Adding recipes is quick and easy. Add your favorites and give them a custom url so others can find them.</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-calendar-plus"></i>
+                <h3>Build menus</h3>
+                <p>Take control of your dinner routine. Create menus to easily shop for a weeks worth of ingredients in one go.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2>Ready to dive in?</h2>
+            <p>Save your favorites, plan meals, shop smarter. Start your culinary adventure today!</p>
+            <div class="hero-buttons">
+                <button class="btn btn-signup">Sign Up</button>
+                <button class="btn btn-login">Login</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='image/shopping-list.png') }}" alt="Shopping List">
+        </div>
+    </div>
+    
+    
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About MealPractice</h3>
+                <p>MealPractice is dedicated to helping you discover and organize your favorite recipes and culinary experiences.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@mealpractice.com</p>
+                <p>Phone: +123456789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>Stay connected with us through our social media channels:</p>
+                <ul class="social-media-links">
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MealPractice. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

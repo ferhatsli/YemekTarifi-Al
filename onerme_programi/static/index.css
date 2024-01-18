@@ -1,0 +1,190 @@
+/* Genel Sayfa Stili */
+html{
+    height: 100%; /* html ve body'nin yüksekliğini tarayıcı penceresine ayarla */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F2E3D5;
+    margin: 0;
+    padding: 0;
+    color: #A6583C;
+    height: 100%;
+    width: 100%;
+}
+
+
+nav {
+    /* Navigasyon arka plan rengi */
+   color: white;
+   padding: 10px 20px; /* Navigasyon iç boşluğu */
+   height: 65px;
+}
+
+
+.nav-container {
+   display: flex;
+   justify-content: space-between; /* Navigasyon içeriğini sağa ve sola yasla */
+   align-items: center; /* Dikey olarak ortala */
+   height: 100%;
+}
+.nav-container h2{
+   color: #4CAF50;
+}
+
+.birl {
+   display: flex;
+   align-items: center; /* Logo ve başlığı dikey olarak ortala */
+}
+
+.logo {
+  max-height: 200px;
+  max-width: 400px;
+  height: auto;
+  width: auto;
+   margin-right: 10px; /* Logonun sağında boşluk */
+   margin-top: 10px;
+}
+
+.buton {
+   padding: 10px 25px;
+   margin-right: 20px;
+   background-color: #733E32;
+   border: none;
+   border-radius: 25px; /* Buton köşe yuvarlaklığı */
+   color: white;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.buton:hover {
+   background-color: #D99F6C; /* Butona mouse üzerine geldiğinde renk değişimi */
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    position: relative;
+    z-index: 1;
+}
+
+/* Arka plan için pseudo-element */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/static/image/katie-smith-uQs1802D0CQ-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+
+h1 {
+    text-align: center;
+    color: #401818;
+    margin-bottom: 30px;
+}
+
+/* Form Stili */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Forma tam genişlik ver */
+}
+
+.ingredient-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fas {
+    margin-right: 5px; /* Metinden biraz boşluk bırak */
+    color: #D99F6C; /* İkon rengi */
+}
+
+.category-title {
+    flex-basis: 100%; /* Kategori başlıklarını tam genişlikte yapar */
+    margin-bottom: 10px; /* Başlık altındaki boşluğu ayarlar */
+    margin-top: 10px;
+    color: #733E32;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-basis: calc(50% - 10px); /* İki sütunlu bir düzen sağlar */
+    margin-bottom: 5px; /* Label altındaki boşluğu ayarlar */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* İçerikleri sağa hizala */
+    width: 100%; /* Butonu içeren div'e tam genişlik ver */
+}
+
+input[type='checkbox'] {
+    margin-right: 5px;
+}
+
+input[type='checkbox']:hover {
+    box-shadow: 0 0 5px rgba(128, 127, 127, 0.2); /* Hafif bir gölge efekti */
+    transition: box-shadow 0.5s ease; /* Yumuşak geçiş efekti */
+}
+
+input[type='submit'] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #401818;
+    color: #F2E3D5;
+    cursor: pointer;
+    transition: background-color 0.7s;
+    /* Butonu blok seviyesinde bir öğe yapmak istersen: */
+    display: inline-block; /* Butonu inline-block yaparak flexbox'un etkili olmasını sağlar */
+}
+
+input[type='submit']:hover {
+    background-color: #A68568;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .ingredient-category {
+        flex-direction: column;
+    }
+
+    .ingredient-category strong {
+        margin-bottom: 10px;
+    }
+}
