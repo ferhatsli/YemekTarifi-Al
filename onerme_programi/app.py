@@ -7,7 +7,7 @@ import re
 from werkzeug.urls import url_parse
 
 app = Flask(__name__)
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Uygulama yapılandırmaları
 app.config['SECRET_KEY'] = 'ferhat3363'
